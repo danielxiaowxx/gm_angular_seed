@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<testsuites>
+  <testsuite name="Chrome 25.0 (Windows)" package="undefined" timestamp="2013-05-29T10:10:39" id="0" hostname="Daniel-PC" tests="2" errors="0" failures="0" time="4.652">
+    <properties>
+      <property name="browser.fullName" value="Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.22 (KHTML, like Gecko) Chrome/25.0.1364.97 Safari/537.22"/>
+    </properties>
+    <testcase name="search result by keyword:你好" time="2.76" classname="Chrome 25.0 (Windows).Test QAM Navigate to pass tab"/>
+    <testcase name="Search result by keyword:你好" time="1.892" classname="Chrome 25.0 (Windows).Test QAM Navigate to uncheck tab"/>
+    <system-out><![CDATA[
+]]></system-out>
+    <system-err/>
+  </testsuite>
+</testsuites>

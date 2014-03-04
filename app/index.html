@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="assets/img/favicon.ico">
+
+    <title>Angular Seed Project - develop by daniel.xiao</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/style/css/bootstrap.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="assets/style/css/app.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+<!--示例，仅用于演示国际化，加载提示，错误提示等-->
+<div class="navbar navbar-inverse navbar-fixed-top" >
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#!/demo">{{I18N.home_title}}</a>
+        </div>
+        <div class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="#!/demo">{{I18N.menu_home}}</a></li>
+                <li><a href="#!/demo">{{I18N.menu_about}}</a></li>
+            </ul>
+            <span class="pull-right text-success" ng-show="loadingService.isLoading()"><b>Loading...</b></span>
+        </div>
+    </div>
+</div>
+
+<!--模板显示区域-->
+<div class="container">
+    <div ng-view></div>
+</div>
+
+
+<!-- Placed at the end of the document so the pages load faster -->
+<!--third js libs-->
+<script type="text/javascript" src="js/lib/jquey/jquery-2.1.0.js"></script>
+<script type="text/javascript" src="js/lib/underscore/underscore.js"></script>
+<script type="text/javascript" src="js/lib/bootstrap/bootstrap.js"></script>
+<script type="text/javascript" src="js/lib/angular/angular.js"></script>
+<script type="text/javascript" src="js/lib/angular/angular-route.js"></script>
+<script type="text/javascript" src="js/lib/angular/angular-animate.js"></script>
+<script type="text/javascript" src="js/lib/angular/angular-cookies.js"></script>
+<script type="text/javascript" src="js/lib/angular/ui-bootstrap-tpls-0.10.0.js"></script>
+
+<!--develop mock support-->
+<script type="text/javascript" src="mock/angular-mocks.js"></script>
+<script type="text/javascript" src="mock/mock.js"></script>
+
+<!--application javascript files-->
+<script type="text/javascript" src="js/common/directive.js"></script>
+<script type="text/javascript" src="js/common/service.js"></script>
+<script type="text/javascript" src="js/app/services/appService.js"></script>
+<script type="text/javascript" src="js/app/services/demoService.js"></script>
+<script type="text/javascript" src="js/app/controllers/appCtrl.js"></script>
+<script type="text/javascript" src="js/app/controllers/demoCtrl.js"></script>
+<script type="text/javascript" src="js/app/app.js"></script>
+</body>
+</html>
