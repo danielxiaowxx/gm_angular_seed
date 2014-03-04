@@ -37,13 +37,19 @@
                 <li class="active"><a href="#!/demo">{{I18N.menu_home}}</a></li>
                 <li><a href="#!/demo">{{I18N.menu_about}}</a></li>
             </ul>
-            <span class="pull-right text-success" ng-show="loadingService.isLoading()"><b>Loading...</b></span>
+            <form class="navbar-form pull-right">
+                <span class="pull-right text-success" ng-show="loadingService.isLoading()"><b>Loading...</b></span>
+            </form>
         </div>
     </div>
 </div>
 
+
 <!--模板显示区域-->
 <div class="container">
+    <!--全局错误显示-->
+    <div gm-alert-bar alert-message="errorService.errorMessage"></div>
+
     <div ng-view></div>
 </div>
 
@@ -66,6 +72,8 @@
 <!--application javascript files-->
 <script type="text/javascript" src="js/common/directive.js"></script>
 <script type="text/javascript" src="js/common/service.js"></script>
+<script type="text/javascript" src="js/app/filters/filter.js"></script>
+<script type="text/javascript" src="js/app/directives/directive.js"></script>
 <script type="text/javascript" src="js/app/services/appService.js"></script>
 <script type="text/javascript" src="js/app/services/demoService.js"></script>
 <script type="text/javascript" src="js/app/controllers/appCtrl.js"></script>

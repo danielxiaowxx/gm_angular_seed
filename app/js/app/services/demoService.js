@@ -10,7 +10,7 @@
     serviceModule.factory('demoService', ['utilService', 'APPConst', function demoService(utilService, APPConst) {
         var serviceInstance = {
             sayHello: function() {
-                return utilService.httpPost('/' + APPConst.Config.backend_context + '/demo/sayHello', {});
+                return utilService.httpPost('/' + APPConst.Config.backend_context + '/demo/sayHello', {name:'daniel'});
             }
         };
         return serviceInstance;

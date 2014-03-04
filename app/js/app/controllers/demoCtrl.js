@@ -23,7 +23,7 @@
 
         function _init() {
             demoService.sayHello().then(function(result) {
-                $scope.name = result.name;
+                $scope.name = result;
             });
         }
 

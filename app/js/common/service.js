@@ -34,6 +34,9 @@
                         errorService.setError(response.status);
                         return $q.reject(response);
                     }
+
+                    response.data = response.data.result ? response.data.result : response.data;
+
                     return response;
                 }
                 , function(response) { // server error

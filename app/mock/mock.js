@@ -27,9 +27,7 @@
  */
 var Mock = {
     Demo: {
-        sayHello: {
-            name: "daniel"
-        }
+        sayHello: "hello daniel"
     }
     // ... 将mock json数据定义在此
 };

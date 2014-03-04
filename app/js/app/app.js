@@ -17,7 +17,7 @@
     var APPConst = {
         Config: {
             frontend_context: 'angular_seed', // 前端web context
-            backend_context: 'angular_seed_backend' // 后端服务context
+            backend_context: 'nodeopenapi' // 后端服务context
         },
         Event: {
             changeLanguage: 'chnage language'
