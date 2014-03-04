@@ -6,11 +6,11 @@
     var filter = angular.module( "app.filter", [] );
 
     /**
-     *
+     * 使用underscore的template方法
      */
-    filter.filter('demo', [function template() {
-        return function(input) {
-            return 'demo:' + input;
+    filter.filter('template', [function template() {
+        return function(inputTmpl, data) {
+            return inputTmpl ? (_.template(inputTmpl))(data) : '';
         }
     }]);
 
