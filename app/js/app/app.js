@@ -26,6 +26,15 @@
     app.constant('APPConst', APPConst);
 
     /**
+     * 定义全局通用的变量和方法
+     * @type {{}}
+     */
+    var APPGlobalVal = {
+
+    }
+    app.value('APPGlobalVal', APPGlobalVal);
+
+    /**
      * 程序配置
      */
     app.config(['$httpProvider', '$locationProvider', '$routeProvider', function config($httpProvider, $locationProvider, $routeProvider) {
@@ -40,7 +49,7 @@
                 templateUrl: 'assets/tmpl/demo-tmpl.html',
                 controller: 'DemoCtrl'
             }).
-            otherwise({templateUrl: 'assets/tmpl/demo-tmpl.html'});
+            otherwise({redirectTo: '/demo'});
 
     }]);
 
@@ -49,7 +58,8 @@
      *
      */
     app.run(['$rootScope', '$http', '$route', 'requestStartInterceptor', 'i18nService', 'APPConst', 'I18NConst', function run($rootScope, $http, $route, requestStartInterceptor, i18nService, APPConst, I18NConst) {
-        $http.defaults.headers.post["Content-Type"] = 'application/x-www-form-urlencoded';
+//        $http.defaults.headers.post["Content-Type"] = 'application/x-www-form-urlencoded'; 用这种类型会导致restify后台处理参数时把数字类型的变成字符串，当决定用这种时，需要service.js中的if (data) data = $.param($.parseJSON(data));注释去掉
+        $http.defaults.headers.post["Content-Type"] = 'application/json';
         $http.defaults.transformRequest.push(requestStartInterceptor);
 
         // 这里可以定义全局共用绑定的model

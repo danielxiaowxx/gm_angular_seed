@@ -66,7 +66,7 @@
      */
     serviceModule.factory('requestStartInterceptor', ['loadingService', function requestStartInterceptor(loadingService) {
         return function(data, headersGetter) {
-            if (data) data = $.param($.parseJSON(data)); // 将参数处理成Form Post数据格式，配合content-type:application/x-www-form-urlencoded
+//            if (data) data = $.param($.parseJSON(data)); // 将参数处理成Form Post数据格式，配合content-type:application/x-www-form-urlencoded
 
             loadingService.requestCount++;
             return data;

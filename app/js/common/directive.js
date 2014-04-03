@@ -110,7 +110,7 @@
         var directiveDefinitionObject = {
             restrict: 'A'
             , template: [
-                '<div class="alert alert-error" ng-show="errorMessage">'
+                '<div class="alert alert-danger" ng-show="errorMessage">'
                 , '    <button type="button" class="close" ng-click="hideAlert()">×</button>'
                 , '    <strong>Error!</strong> {{errorMessage}}'
                 , '</div>'
