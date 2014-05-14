@@ -7,9 +7,9 @@
 (function() {
 
     // fake backend app：当用假数据时用以下声明
-//    var app = angular.module('app', ['gm.directive', 'app.controller', 'ui.bootstrap', 'ngRoute', 'ngAnimate', 'app.mock']);
+    var app = angular.module('app', ['gm.directive', 'app.controller', 'ui.bootstrap', 'bootstrap-tagsinput', 'plupload.module', 'ui.select2', 'ui.sortable', 'ngRoute', 'ngAnimate', 'app.mock']);
     // real backend app：当用真数据时用以下声明
-    var app = angular.module('app', ['gm.directive', 'app.controller', 'ui.bootstrap', 'ngRoute', 'ngAnimate']);
+//    var app = angular.module('app', ['gm.directive', 'app.controller', 'ui.bootstrap', 'bootstrap-tagsinput', 'plupload.module', 'ui.select2', 'ui.sortable', 'ngRoute', 'ngAnimate']);
 
     /**
      * 定义全局常量
