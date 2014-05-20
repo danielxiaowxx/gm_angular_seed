@@ -180,21 +180,22 @@ angular.module('ui.select2', []).value('uiSelect2Config', {}).directive('uiSelec
         }
 
         // Initialize the plugin late so that the injected DOM does not disrupt the template compiler
-        $timeout(function () {
-          elm.select2(opts);
+        // 将$setTimeout改成setTimeout，主要是因为用Modal Window时赋值有问题
+          setTimeout(function() {
+              elm.select2(opts);
 
-          // Set initial value - I'm not sure about this but it seems to need to be there
-          elm.val(controller.$viewValue);
-          // important!
-          controller.$render();
+              // Set initial value - I'm not sure about this but it seems to need to be there
+              elm.val(controller.$viewValue);
+              // important!
+              controller.$render();
 
-          // Not sure if I should just check for !isSelect OR if I should check for 'tags' key
-          if (!opts.initSelection && !isSelect) {
-            controller.$setViewValue(
-              convertToAngularModel(elm.select2('data'))
-            );
-          }
-        });
+              // Not sure if I should just check for !isSelect OR if I should check for 'tags' key
+              if (!opts.initSelection && !isSelect) {
+                  controller.$setViewValue(
+                      convertToAngularModel(elm.select2('data'))
+                  );
+              }
+          }, 500);
       };
     }
   };
